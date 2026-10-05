@@ -1,0 +1,1210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Dr. D.B.N. Murthy | Dermatologist in Jubilee Hills, Hyderabad</title>
+  <meta name="description" content="Dr. D.B.N. Murthy is a dermatologist in Jubilee Hills, Hyderabad, providing professional consultation for skin-related concerns.">
+  <meta property="og:title" content="Dr. D.B.N. Murthy | Dermatologist in Jubilee Hills, Hyderabad">
+  <meta property="og:description" content="Dr. D.B.N. Murthy is a dermatologist in Jubilee Hills, Hyderabad, providing professional consultation for skin-related concerns.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://d2ol7oe51mr4n9.cloudfront.net" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --fg: #0d0c0b;
+      --fg-soft: rgba(13,12,11,.64);
+      --fg-faint: rgba(13,12,11,.42);
+      --shade: #f2f0ec;
+      --rule: rgba(13,12,11,.16);
+      --ease: cubic-bezier(.22,.61,.36,1);
+      --pill-bg: #0a0908;
+      --pill-fg: #ffffff;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      background: var(--shade);
+      color: var(--fg);
+      font-family: 'Inter Tight', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-weight: 400;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
+    }
+
+    /* Fixed background video layer */
+    .stage {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      overflow: hidden;
+      background: var(--shade);
+    }
+
+    .stage video {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      height: 100%;
+      transform: translate(-50%, -50%) scale(1.02);
+      object-fit: cover;
+      filter: contrast(1.02);
+      will-change: transform;
+    }
+
+    .veil {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background:
+        linear-gradient(to bottom, rgba(242,240,236,.62) 0%, rgba(242,240,236,.12) 22%, rgba(242,240,236,.12) 78%, rgba(242,240,236,.66) 100%),
+        radial-gradient(100% 80% at 50% 48%, rgba(242,240,236,0) 0%, rgba(242,240,236,.34) 100%),
+        rgba(242,240,236,.20);
+    }
+
+    .grain {
+      position: absolute;
+      inset: -50%;
+      opacity: .13;
+      mix-blend-mode: multiply;
+      pointer-events: none;
+      background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='140' height='140'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/></filter><rect width='140' height='140' filter='url(%23n)' opacity='.5'/></svg>");
+    }
+
+    /* Chrome (fixed header) */
+    .chrome {
+      position: fixed;
+      left: 0;
+      right: 0;
+      top: 0;
+      z-index: 40;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: max(14px, calc(env(safe-area-inset-top, 0px) + 12px)) clamp(16px, 3.4vw, 44px) 14px;
+      background: linear-gradient(to bottom, rgba(242,240,236,.94) 0%, rgba(242,240,236,.78) 72%, rgba(242,240,236,0) 100%);
+    }
+
+    .mark {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      font-size: 15px;
+      letter-spacing: -.012em;
+      color: var(--fg);
+      min-width: 0;
+      flex-shrink: 1;
+      text-decoration: none;
+    }
+
+    .mark-star {
+      opacity: .85;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: clamp(14px, 2.4vw, 32px);
+      flex-shrink: 0;
+    }
+
+    .nav a:not(.pill) {
+      color: var(--fg);
+      text-decoration: none;
+      font-size: 14.5px;
+      letter-spacing: -.008em;
+      opacity: .88;
+      transition: opacity .3s var(--ease);
+      cursor: pointer;
+    }
+
+    .nav a:not(.pill):hover {
+      opacity: 1;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      height: 40px;
+      padding: 0 21px;
+      border-radius: 999px;
+      background: var(--pill-bg);
+      color: var(--pill-fg);
+      font-size: 14.5px;
+      font-weight: 500;
+      letter-spacing: -.008em;
+      text-decoration: none;
+      white-space: nowrap;
+      opacity: 1;
+      border: 1px solid rgba(10,9,8,.12);
+      box-shadow: 0 1px 0 rgba(255,255,255,.10) inset;
+      -webkit-text-fill-color: var(--pill-fg);
+      transition: transform .4s var(--ease), background .3s var(--ease), color .3s var(--ease);
+      cursor: pointer;
+    }
+
+    .nav .pill {
+      color: #fff;
+      -webkit-text-fill-color: #fff;
+    }
+
+    .pill:hover,
+    .pill:focus-visible {
+      transform: translateY(-2px);
+      background: #000;
+      color: #fff;
+      -webkit-text-fill-color: #fff;
+    }
+
+    .pill:focus-visible {
+      outline: 2px solid var(--fg);
+      outline-offset: 2px;
+    }
+
+    /* Footer */
+    .foot {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 40;
+      display: flex;
+      justify-content: center;
+      padding: 14px clamp(16px, 4vw, 24px) max(16px, calc(env(safe-area-inset-bottom, 0px) + 12px));
+      font-size: 12px;
+      line-height: 1.45;
+      letter-spacing: .02em;
+      color: var(--fg-faint);
+      text-align: center;
+      pointer-events: none;
+      background: linear-gradient(to top, rgba(242,240,236,.92) 0%, rgba(242,240,236,.72) 72%, rgba(242,240,236,0) 100%);
+    }
+
+    .foot-inner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 4px 10px;
+      pointer-events: auto;
+    }
+
+    .foot-link {
+      color: var(--fg-soft);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      text-decoration-color: rgba(13,12,11,.2);
+      transition: color .2s var(--ease);
+    }
+
+    .foot-link:hover {
+      color: var(--fg);
+    }
+
+    /* Scroll progress hairline */
+    .meter {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 50;
+      height: 2px;
+      width: 100%;
+      transform: scaleX(0);
+      transform-origin: 0 50%;
+      background: var(--fg);
+      opacity: .55;
+    }
+
+    /* Panel layer */
+    .panels {
+      position: fixed;
+      inset: 0;
+      z-index: 20;
+      pointer-events: none;
+    }
+
+    .panel {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: max(104px, calc(env(safe-area-inset-top, 0px) + 88px)) clamp(20px, 5vw, 60px) max(96px, calc(env(safe-area-inset-bottom, 0px) + 80px));
+      opacity: 0;
+      will-change: opacity, transform;
+    }
+
+    .eyebrow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 6px 12px;
+      font-size: 12.5px;
+      letter-spacing: .045em;
+      color: var(--fg-soft);
+      margin-bottom: clamp(16px, 2vw, 22px);
+      max-width: min(52ch, 100%);
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      font-weight: 400;
+      font-size: clamp(34px, 7.1vw, 104px);
+      line-height: .98;
+      letter-spacing: -.036em;
+      max-width: 15ch;
+      text-wrap: balance;
+    }
+
+    .sub {
+      margin-top: clamp(18px, 2.2vw, 28px);
+      font-size: clamp(15px, 1.28vw, 19px);
+      line-height: 1.5;
+      letter-spacing: -.008em;
+      color: var(--fg-soft);
+      max-width: min(48ch, 100%);
+      text-wrap: pretty;
+    }
+
+    .cta {
+      margin-top: clamp(28px, 3.4vw, 44px);
+      pointer-events: auto;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+
+    .cta .pill {
+      height: 48px;
+      padding: 0 27px;
+      font-size: 15px;
+      max-width: min(100%, 320px);
+    }
+
+    /* Preloader */
+    .boot {
+      position: fixed;
+      inset: 0;
+      z-index: 90;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      background: var(--shade);
+      transition: opacity .7s var(--ease), visibility .7s;
+    }
+
+    .boot.done {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    .boot p {
+      font-size: 12.5px;
+      letter-spacing: .05em;
+      color: var(--fg-faint);
+    }
+
+    .bar {
+      width: 150px;
+      height: 1px;
+      background: var(--rule);
+      overflow: hidden;
+    }
+
+    .bar i {
+      display: block;
+      height: 100%;
+      width: 100%;
+      background: var(--fg);
+      transform: scaleX(0);
+      transform-origin: 0 50%;
+    }
+
+    /* Scroll track */
+    .track {
+      position: relative;
+      z-index: 1;
+      height: 560vh;
+      min-height: 3200px;
+    }
+
+    /* Editorial Modal Sheet for Clinical Information */
+    .sheet-scrim {
+      position: fixed;
+      inset: 0;
+      z-index: 80;
+      background: rgba(13, 12, 11, 0.42);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity .35s var(--ease), visibility .35s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: clamp(16px, 3vw, 32px);
+    }
+
+    .sheet-scrim.open {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .sheet-container {
+      width: 100%;
+      max-width: 620px;
+      max-height: min(88vh, 760px);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .sheet {
+      background: var(--shade);
+      border: 1px solid var(--rule);
+      border-radius: 20px;
+      box-shadow: 0 24px 60px rgba(13, 12, 11, 0.16);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      transform: translateY(12px) scale(0.98);
+      transition: transform .35s var(--ease);
+    }
+
+    .sheet-scrim.open .sheet {
+      transform: translateY(0) scale(1);
+    }
+
+    .sheet-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 16px 20px;
+      border-bottom: 1px solid var(--rule);
+      background: rgba(242, 240, 236, 0.85);
+    }
+
+    .sheet-tabs {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      overflow-x: auto;
+    }
+
+    .sheet-tab {
+      background: none;
+      border: none;
+      font-family: inherit;
+      font-size: 13.5px;
+      letter-spacing: -.005em;
+      color: var(--fg-soft);
+      padding: 6px 12px;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: background .2s var(--ease), color .2s var(--ease);
+      white-space: nowrap;
+    }
+
+    .sheet-tab:hover {
+      color: var(--fg);
+    }
+
+    .sheet-tab.active {
+      background: rgba(13, 12, 11, 0.08);
+      color: var(--fg);
+      font-weight: 500;
+    }
+
+    .sheet-close {
+      background: none;
+      border: none;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      color: var(--fg-soft);
+      font-size: 18px;
+      line-height: 1;
+      transition: background .2s var(--ease), color .2s var(--ease);
+      flex-shrink: 0;
+    }
+
+    .sheet-close:hover {
+      background: rgba(13, 12, 11, 0.08);
+      color: var(--fg);
+    }
+
+    .sheet-content {
+      padding: clamp(24px, 4vw, 36px);
+      overflow-y: auto;
+      overscroll-behavior: contain;
+    }
+
+    .sheet-pane {
+      display: none;
+    }
+
+    .sheet-pane.active {
+      display: block;
+      animation: fadeIn .25s var(--ease);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(4px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .sheet-eyebrow {
+      font-size: 11.5px;
+      letter-spacing: .06em;
+      color: var(--fg-soft);
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .sheet-heading {
+      font-weight: 400;
+      font-size: clamp(26px, 4.2vw, 38px);
+      line-height: 1.05;
+      letter-spacing: -.03em;
+      color: var(--fg);
+      margin-bottom: 16px;
+    }
+
+    .sheet-subhead {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 6px 10px;
+      font-size: 13.5px;
+      color: var(--fg-soft);
+      margin-bottom: 20px;
+      line-height: 1.4;
+    }
+
+    .sheet-body {
+      font-size: 15px;
+      line-height: 1.6;
+      color: var(--fg-soft);
+      margin-bottom: 24px;
+    }
+
+    .sheet-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: rgba(13, 12, 11, 0.05);
+      border: 1px solid var(--rule);
+      font-size: 13px;
+      color: var(--fg);
+      margin-bottom: 24px;
+    }
+
+    .badge-star {
+      color: #b8860b;
+      font-size: 14px;
+    }
+
+    .badge-score {
+      font-weight: 500;
+    }
+
+    .badge-count {
+      color: var(--fg-soft);
+    }
+
+    .service-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 28px;
+    }
+
+    .service-item {
+      padding: 14px 16px;
+      border-radius: 12px;
+      background: rgba(13, 12, 11, 0.03);
+      border: 1px solid rgba(13, 12, 11, 0.08);
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .service-cat {
+      font-size: 11px;
+      letter-spacing: .06em;
+      color: var(--fg-faint);
+      font-weight: 500;
+      text-transform: uppercase;
+    }
+
+    .service-name {
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--fg);
+      letter-spacing: -.01em;
+    }
+
+    .contact-details {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-bottom: 28px;
+    }
+
+    .contact-row {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid rgba(13, 12, 11, 0.08);
+    }
+
+    .contact-label {
+      font-size: 11.5px;
+      letter-spacing: .05em;
+      color: var(--fg-faint);
+      text-transform: uppercase;
+    }
+
+    .contact-value {
+      font-size: 15px;
+      line-height: 1.5;
+      color: var(--fg);
+    }
+
+    .contact-phone {
+      color: var(--fg);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      font-weight: 500;
+    }
+
+    .sheet-actions {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 8px;
+    }
+
+    .sheet-btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      height: 40px;
+      padding: 0 18px;
+      border-radius: 999px;
+      background: transparent;
+      color: var(--fg);
+      border: 1px solid var(--rule);
+      font-family: inherit;
+      font-size: 14px;
+      font-weight: 400;
+      letter-spacing: -.008em;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background .2s var(--ease), border-color .2s var(--ease);
+    }
+
+    .sheet-btn-secondary:hover {
+      background: rgba(13, 12, 11, 0.06);
+      border-color: rgba(13, 12, 11, 0.28);
+    }
+
+    /* Responsive Breakpoints */
+    @media (max-width:900px) {
+      .veil {
+        background:
+          linear-gradient(to bottom, rgba(242,240,236,.72) 0%, rgba(242,240,236,.18) 24%, rgba(242,240,236,.18) 76%, rgba(242,240,236,.74) 100%),
+          radial-gradient(100% 80% at 50% 48%, rgba(242,240,236,0) 0%, rgba(242,240,236,.40) 100%),
+          rgba(242,240,236,.24);
+      }
+    }
+
+    @media (max-width:720px) {
+      .nav a:not(.pill) {
+        display: none;
+      }
+      .mark {
+        font-size: 14px;
+      }
+      .nav .pill {
+        height: 38px;
+        padding: 0 16px;
+        font-size: 13.5px;
+      }
+      h1 {
+        max-width: 12ch;
+        font-size: clamp(30px, 9.8vw, 52px);
+      }
+      .sub {
+        font-size: 15px;
+        max-width: 34ch;
+      }
+      .panel {
+        padding: max(92px, calc(env(safe-area-inset-top, 0px) + 76px)) 18px max(88px, calc(env(safe-area-inset-bottom, 0px) + 72px));
+      }
+      .foot {
+        font-size: 11px;
+      }
+      .foot-inner {
+        max-width: 38ch;
+      }
+      .sheet-content {
+        padding: 20px;
+      }
+      .sheet-actions .pill,
+      .sheet-actions .sheet-btn-secondary {
+        width: 100%;
+      }
+    }
+
+    @media (max-width:420px) {
+      .mark-star {
+        display: none;
+      }
+      .nav .pill {
+        height: 36px;
+        padding: 0 14px;
+        font-size: 13px;
+      }
+      h1 {
+        max-width: 11ch;
+        font-size: clamp(28px, 10.5vw, 40px);
+      }
+      .eyebrow {
+        font-size: 11px;
+        letter-spacing: .04em;
+        max-width: 28ch;
+      }
+      .cta .pill {
+        width: 100%;
+        max-width: 280px;
+        height: 44px;
+        padding: 0 20px;
+        font-size: 14px;
+      }
+    }
+
+    @media (max-height:520px) and (orientation:landscape) {
+      .panel {
+        padding: max(72px, calc(env(safe-area-inset-top, 0px) + 56px)) 24px max(64px, calc(env(safe-area-inset-bottom, 0px) + 48px));
+      }
+      h1 {
+        font-size: clamp(28px, 8vh, 44px);
+      }
+      .sub {
+        margin-top: 12px;
+        font-size: 14px;
+      }
+      .cta {
+        margin-top: 16px;
+      }
+      .sheet-container {
+        max-height: 92vh;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Preloader -->
+  <div class="boot" id="boot">
+    <div class="bar"><i id="bootBar"></i></div>
+    <p id="bootPct">LOADING 0%</p>
+  </div>
+
+  <!-- Background Video Stage -->
+  <div class="stage">
+    <video id="clip" muted playsinline preload="auto" disablepictureinpicture></video>
+    <div class="veil"></div>
+    <div class="grain"></div>
+  </div>
+
+  <!-- Scroll Progress Meter -->
+  <i class="meter" id="meter"></i>
+
+  <!-- Header -->
+  <header class="chrome">
+    <a class="mark" href="#" aria-label="Dr. D.B.N. Murthy Dermatology">
+      <span class="mark-star" aria-hidden="true">&#10037;</span>&nbsp;Dr. D.B.N. Murthy
+    </a>
+    <nav class="nav">
+      <a href="#about" aria-label="About Dr. D.B.N. Murthy">About</a>
+      <a href="#dermatology" aria-label="Dermatology Consultation Areas">Dermatology</a>
+      <a href="#contact" aria-label="Clinic Location and Contact">Contact</a>
+      <a href="https://maps.app.goo.gl/oyBc29XWn2Nmjfib8" target="_blank" rel="noopener noreferrer" aria-label="Clinic Address on Google Maps">Address</a>
+      <a class="pill" href="#contact" aria-label="Book Consultation with Dr. D.B.N. Murthy">Book Consultation</a>
+    </nav>
+  </header>
+
+  <!-- Cross-fading Narrative Panels -->
+  <main class="panels">
+    <!-- Panel 1: Hero -->
+    <section class="panel" data-panel>
+      <div class="eyebrow">DERMATOLOGIST <span>&middot;</span> JUBILEE HILLS, HYDERABAD</div>
+      <h1>Healthy Skin.<br />Confident You.</h1>
+      <p class="sub">Personalized dermatology consultation focused on understanding your skin concerns and providing thoughtful, individual care.</p>
+      <div class="cta">
+        <a class="pill" href="#contact" aria-label="Book Consultation with Dr. D.B.N. Murthy">Book Consultation</a>
+      </div>
+    </section>
+
+    <!-- Panel 2: Personalized Care -->
+    <section class="panel" data-panel>
+      <div class="eyebrow">PERSONALIZED SKIN CARE</div>
+      <h1>Every Skin<br />Has Its Story.</h1>
+      <p class="sub">A thoughtful consultation begins with understanding your concerns, your skin, and the factors affecting it — before deciding on the right approach.</p>
+      <div class="cta">
+        <a class="pill" href="#dermatology" aria-label="Explore Dermatology Consultation Areas">Explore Dermatology</a>
+      </div>
+    </section>
+
+    <!-- Panel 3: Consultation & Clinic -->
+    <section class="panel" data-panel>
+      <div class="eyebrow">DERMATOLOGY CONSULTATION</div>
+      <h1>Clearer Understanding.<br />Better Skin Care.</h1>
+      <p class="sub">Discuss your skin concerns with Dr. D.B.N. Murthy at the Jubilee Hills clinic in Hyderabad.</p>
+      <div class="cta">
+        <a class="pill" href="tel:08096933366" aria-label="Call clinic to book consultation: 080969 33366">Call 080969 33366</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Fixed Footer -->
+  <footer class="foot">
+    <div class="foot-inner">
+      <span>Dr. D.B.N. Murthy &nbsp;&middot;&nbsp; Dermatologist &nbsp;&middot;&nbsp; Jubilee Hills, Hyderabad</span>
+      <span>&middot;</span>
+      <span>265/D, Road No. 10 &nbsp;&middot;&nbsp; <a href="tel:08096933366" class="foot-link" aria-label="Call clinic at 080969 33366">080969 33366</a></span>
+      <span>&middot;</span>
+      <a href="#contact" class="foot-link" aria-label="Book Consultation with Dr. D.B.N. Murthy">Book Consultation</a>
+    </div>
+  </footer>
+
+  <!-- Scroll Height Track -->
+  <div class="track"></div>
+
+  <!-- Editorial Modal Sheet for Clinical Information -->
+  <div class="sheet-scrim" id="sheetScrim" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="sheetHeading">
+    <div class="sheet-container">
+      <div class="sheet">
+        <div class="sheet-header">
+          <div class="sheet-tabs" role="tablist">
+            <button class="sheet-tab active" data-tab="about" role="tab" aria-selected="true" aria-controls="pane-about">About</button>
+            <button class="sheet-tab" data-tab="dermatology" role="tab" aria-selected="false" aria-controls="pane-dermatology">Dermatology</button>
+            <button class="sheet-tab" data-tab="contact" role="tab" aria-selected="false" aria-controls="pane-contact">Visit &amp; Contact</button>
+          </div>
+          <button class="sheet-close" id="sheetClose" aria-label="Close dialog">&#x2715;</button>
+        </div>
+
+        <div class="sheet-content">
+          <!-- ABOUT TAB -->
+          <article class="sheet-pane active" id="pane-about" role="tabpanel">
+            <div class="sheet-eyebrow">ABOUT DR. D.B.N. MURTHY</div>
+            <h2 class="sheet-heading" id="sheetHeading">Focused on<br>Skin Health.</h2>
+            <div class="sheet-subhead">
+              <span>డా. డి.బి.ఎన్.మూర్తి</span>
+              <span>&middot;</span>
+              <span>Dermatologist</span>
+              <span>&middot;</span>
+              <span>Jubilee Hills, Hyderabad</span>
+            </div>
+            <p class="sheet-body">
+              Dr. D.B.N. Murthy is a dermatologist practicing in Jubilee Hills, Hyderabad. The clinic provides a professional setting for patients seeking consultation for skin-related concerns.
+            </p>
+            <div class="sheet-badge">
+              <span class="badge-star">&#9733;</span>
+              <span class="badge-score">3.9</span>
+              <span>&middot;</span>
+              <span class="badge-count">152 Google Reviews</span>
+            </div>
+            <div class="sheet-actions">
+              <a href="tel:08096933366" class="pill" aria-label="Call Dr. D.B.N. Murthy at 080969 33366">Call 080969 33366</a>
+              <button class="sheet-btn-secondary" data-switch="dermatology">Consultation Areas &rarr;</button>
+            </div>
+          </article>
+
+          <!-- DERMATOLOGY TAB -->
+          <article class="sheet-pane" id="pane-dermatology" role="tabpanel">
+            <div class="sheet-eyebrow">AREAS OF CONSULTATION</div>
+            <h2 class="sheet-heading">Dermatology<br>Care &amp; Evaluation</h2>
+            <p class="sheet-body">
+              Dr. D.B.N. Murthy offers personalized consultations to understand individual skin concerns and formulate appropriate clinical guidance:
+            </p>
+            <div class="service-list">
+              <div class="service-item">
+                <span class="service-cat">SKIN CONCERNS</span>
+                <h3 class="service-name">Acne &amp; Acne-Prone Skin</h3>
+              </div>
+              <div class="service-item">
+                <span class="service-cat">PIGMENTATION</span>
+                <h3 class="service-name">Pigmentation &amp; Uneven Skin Tone</h3>
+              </div>
+              <div class="service-item">
+                <span class="service-cat">INFECTIONS</span>
+                <h3 class="service-name">Common Skin Infections</h3>
+              </div>
+              <div class="service-item">
+                <span class="service-cat">CHRONIC SKIN CONDITIONS</span>
+                <h3 class="service-name">Long-Term &amp; Recurring Skin Concerns</h3>
+              </div>
+              <div class="service-item">
+                <span class="service-cat">GENERAL DERMATOLOGY</span>
+                <h3 class="service-name">General Skin Consultation &amp; Evaluation</h3>
+              </div>
+            </div>
+            <div class="sheet-actions">
+              <a href="tel:08096933366" class="pill" aria-label="Book Consultation: 080969 33366">Book Consultation</a>
+              <button class="sheet-btn-secondary" data-switch="contact">Visit the Clinic &rarr;</button>
+            </div>
+          </article>
+
+          <!-- CONTACT TAB -->
+          <article class="sheet-pane" id="pane-contact" role="tabpanel">
+            <div class="sheet-eyebrow">VISIT THE CLINIC</div>
+            <h2 class="sheet-heading">Visit Dr. D.B.N. Murthy<br>in Jubilee Hills.</h2>
+            <div class="contact-details">
+              <div class="contact-row">
+                <span class="contact-label">Address</span>
+                <p class="contact-value">
+                  265/D, Road Number 10<br>
+                  Jubilee Hills, Hyderabad<br>
+                  Telangana 500033, India
+                </p>
+              </div>
+              <div class="contact-row">
+                <span class="contact-label">Phone</span>
+                <p class="contact-value">
+                  <a href="tel:08096933366" class="contact-phone" aria-label="Call clinic phone number 080969 33366">080969 33366</a>
+                </p>
+              </div>
+              <div class="contact-row">
+                <span class="contact-label">Plus Code</span>
+                <p class="contact-value">CCM7+JW Hyderabad, Telangana</p>
+              </div>
+              <div class="contact-row">
+                <span class="contact-label">Google Rating</span>
+                <p class="contact-value">3.9 &#9733; &nbsp;&middot;&nbsp; 152 Google Reviews</p>
+              </div>
+            </div>
+            <div class="sheet-actions">
+              <a href="tel:08096933366" class="pill" aria-label="Call the Clinic at 080969 33366">Call the Clinic</a>
+              <a href="https://maps.app.goo.gl/oyBc29XWn2Nmjfib8" target="_blank" rel="noopener noreferrer" class="sheet-btn-secondary" aria-label="Get directions to Jubilee Hills clinic on Google Maps">Get Directions &nearr;</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function() {
+      "use strict";
+
+      // 1920×1080, 10.04s, 241 frames, all-intra — every frame is a keyframe,
+      // which is why a scroll scrub can land on an exact frame instantly without inter-frame decoding delays.
+      var VIDEO_URL = "https://d2ol7oe51mr4n9.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/45567745-d826-44a2-a5ce-7ef670944e60.mp4";
+
+      var clip = document.getElementById("clip");
+      var boot = document.getElementById("boot");
+      var bootBar = document.getElementById("bootBar");
+      var bootPct = document.getElementById("bootPct");
+      var meter = document.getElementById("meter");
+      var panels = [].slice.call(document.querySelectorAll("[data-panel]"));
+
+      // Cue table:
+      // Each panel owns a slice of scroll as [fadeInStart, fadeInEnd, fadeOutStart, fadeOutEnd] in 0..1 page progress.
+      // The gaps between one panel's fadeOutEnd and the next's fadeInStart are deliberate dead zones — video only — so two panels are never readable at once.
+      var CUES = [
+        [0.00, 0.00, 0.15, 0.23],
+        [0.35, 0.43, 0.57, 0.65],
+        [0.77, 0.85, 1.10, 1.20]
+      ];
+      var DRIFT = 22; // px of counter-scroll travel per panel
+
+      function clamp(v, a, b) {
+        return Math.max(a, Math.min(b, v));
+      }
+
+      function smooth(t) {
+        return t * t * (3 - 2 * t);
+      }
+
+      function ramp(p, a, b) {
+        if (b <= a) {
+          return p >= b ? 1 : 0;
+        }
+        return smooth(clamp((p - a) / (b - a), 0, 1));
+      }
+
+      var progress = 0;
+      var seekTo = 0;
+      var seekAt = 0;
+      var duration = 0;
+      var ready = false;
+      var started = false;
+      var attached = false;
+
+      function readScroll() {
+        var max = document.documentElement.scrollHeight - window.innerHeight;
+        progress = max > 0 ? clamp(window.pageYOffset / max, 0, 1) : 0;
+        if (duration) seekTo = progress * duration;
+      }
+
+      function paint() {
+        meter.style.transform = "scaleX(" + progress + ")";
+        for (var i = 0; i < panels.length; i++) {
+          var el = panels[i];
+          var c = CUES[i];
+          var enter = ramp(progress, c[0], c[1]);
+          var leave = ramp(progress, c[2], c[3]);
+          var o = enter * (1 - leave);
+          var y = (1 - enter) * DRIFT - leave * DRIFT;
+          el.style.opacity = o;
+          el.style.transform = "translate3d(0," + y + "px,0)";
+          el.style.pointerEvents = o > 0.6 ? "auto" : "none";
+        }
+      }
+
+      // rAF loop, never cancelled
+      function frame() {
+        if (ready && duration) {
+          var gap = seekTo - seekAt;
+          if (Math.abs(gap) > 0.0008) {
+            seekAt += gap * 0.115; // easing factor — do not change
+            if (clip.readyState >= 2 && !clip.seeking) {
+              try {
+                clip.currentTime = seekAt;
+              } catch (e) {}
+            }
+          }
+        }
+        paint();
+        requestAnimationFrame(frame);
+      }
+
+      function setProgress(f) {
+        bootBar.style.transform = "scaleX(" + f + ")";
+        bootPct.textContent = "LOADING " + Math.round(f * 100) + "%";
+      }
+
+      function start() {
+        if (started) return;
+        started = true;
+        ready = true;
+        boot.classList.add("done");
+        readScroll();
+        seekAt = seekTo;
+      }
+
+      function attach(src) {
+        if (attached) return;
+        attached = true;
+
+        clip.addEventListener("loadedmetadata", function() {
+          duration = clip.duration || 0;
+          clip.pause();
+          readScroll();
+          seekAt = seekTo;
+          try {
+            clip.currentTime = seekAt;
+          } catch (e) {}
+        });
+
+        clip.addEventListener("loadeddata", start);
+        clip.addEventListener("canplaythrough", start);
+        clip.addEventListener("error", start);
+
+        clip.src = src;
+        clip.load();
+        setTimeout(start, 12000); // so a stalled decode never strands the page behind the preloader
+      }
+
+      // Preload the MP4 as a fully buffered Blob first because seeking inside an in-memory buffered blob
+      // is near-instant, whereas seeking via HTTP Range requests over high-latency networks causes stutter and buffering delays.
+      function preload() {
+        var controller = typeof AbortController !== "undefined" ? new AbortController() : null;
+        var bail = setTimeout(function() {
+          if (!attached) {
+            if (controller) {
+              try { controller.abort(); } catch (e) {}
+            }
+            setProgress(1);
+            attach(VIDEO_URL);
+          }
+        }, 15000);
+
+        var fetchOpts = controller ? { signal: controller.signal } : {};
+        fetch(VIDEO_URL, fetchOpts)
+          .then(function(res) {
+            if (!res.ok || !res.body) {
+              throw new Error("Fetch failed: " + res.status);
+            }
+            var total = parseInt(res.headers.get("content-length") || "0", 10);
+            var reader = res.body.getReader();
+            var chunks = [];
+            var got = 0;
+
+            function pump() {
+              return reader.read().then(function(r) {
+                if (r.done) {
+                  return new Blob(chunks, { type: "video/mp4" });
+                }
+                chunks.push(r.value);
+                got += (r.value.byteLength || r.value.length || 0);
+                setProgress(total ? got / total : Math.min(got / 11e6, 0.95));
+                return pump();
+              });
+            }
+            return pump();
+          })
+          .then(function(blob) {
+            clearTimeout(bail);
+            setProgress(1);
+            attach(URL.createObjectURL(blob));
+          })
+          .catch(function() {
+            // Covers CORS failure, abort, network error, or offline
+            clearTimeout(bail);
+            setProgress(1);
+            attach(VIDEO_URL);
+          });
+      }
+
+      // iOS will not paint a frame from a video that has never been played,
+      // so nudge it once on the first interaction and pause immediately:
+      function unlock() {
+        var p = clip.play();
+        if (p && p.then) {
+          p.then(function() { clip.pause(); }).catch(function() {});
+        } else {
+          clip.pause();
+        }
+      }
+
+      ["touchstart", "pointerdown", "wheel", "keydown"].forEach(function(ev) {
+        window.addEventListener(ev, unlock, { once: true, passive: true });
+      });
+
+      // Modal Sheet Interactions (About, Dermatology, Visit & Contact)
+      var sheetScrim = document.getElementById("sheetScrim");
+      var sheetClose = document.getElementById("sheetClose");
+      var tabs = [].slice.call(document.querySelectorAll(".sheet-tab"));
+      var panes = [].slice.call(document.querySelectorAll(".sheet-pane"));
+
+      function switchTab(targetName) {
+        tabs.forEach(function(tab) {
+          var match = tab.getAttribute("data-tab") === targetName;
+          tab.classList.toggle("active", match);
+          tab.setAttribute("aria-selected", match ? "true" : "false");
+        });
+        panes.forEach(function(pane) {
+          var match = pane.id === "pane-" + targetName;
+          pane.classList.toggle("active", match);
+        });
+      }
+
+      function openSheet(tabName) {
+        switchTab(tabName || "about");
+        sheetScrim.classList.add("open");
+        sheetScrim.setAttribute("aria-hidden", "false");
+      }
+
+      function closeSheet() {
+        sheetScrim.classList.remove("open");
+        sheetScrim.setAttribute("aria-hidden", "true");
+      }
+
+      if (sheetClose) {
+        sheetClose.addEventListener("click", closeSheet);
+      }
+
+      if (sheetScrim) {
+        sheetScrim.addEventListener("click", function(e) {
+          if (e.target === sheetScrim) closeSheet();
+        });
+      }
+
+      window.addEventListener("keydown", function(e) {
+        if (e.key === "Escape" && sheetScrim.classList.contains("open")) {
+          closeSheet();
+        }
+      });
+
+      tabs.forEach(function(tab) {
+        tab.addEventListener("click", function() {
+          var name = tab.getAttribute("data-tab");
+          switchTab(name);
+        });
+      });
+
+      // Delegate internal switches inside panes
+      document.addEventListener("click", function(e) {
+        var switchBtn = e.target.closest("[data-switch]");
+        if (switchBtn) {
+          var targetTab = switchBtn.getAttribute("data-switch");
+          switchTab(targetTab);
+          return;
+        }
+
+        var link = e.target.closest("a[href^='#']");
+        if (link) {
+          var href = link.getAttribute("href");
+          if (href === "#about") {
+            e.preventDefault();
+            openSheet("about");
+          } else if (href === "#dermatology") {
+            e.preventDefault();
+            openSheet("dermatology");
+          } else if (href === "#contact") {
+            e.preventDefault();
+            openSheet("contact");
+          } else if (href === "#") {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          }
+        }
+      });
+
+      // Wiring in order
+      window.addEventListener("scroll", readScroll, { passive: true });
+      window.addEventListener("resize", readScroll);
+
+      readScroll();
+      paint();
+      preload();
+      requestAnimationFrame(frame);
+    })();
+  </script>
+</body>
+</html>
